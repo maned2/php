@@ -1,7 +1,7 @@
 version: "3"
 services:
-  php-line:
-    container_name: php-line
+  php-main:
+    container_name: php-main
     user: 1000:1000
     build: .
     environment:

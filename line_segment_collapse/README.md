@@ -20,7 +20,7 @@ task:
 ```shell
 docker-compose up -d
 
-docker exec -it php-main sh
+docker exec -it php-line sh
 
 #in container: 
 /bin/sh composer install
