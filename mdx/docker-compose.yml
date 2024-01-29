@@ -1,0 +1,11 @@
+version: "3"
+services:
+  php-mdx:
+    container_name: php-mdx
+    user: 1000:1000
+    build: .
+    environment:
+      XDEBUG_CONFIG: "remote_host=host.docker.internal remote_enable=1"
+      PHP_IDE_CONFIG: "serverName=Docker"
+    volumes:
+      - './:/var/www/html'
