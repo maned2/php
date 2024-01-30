@@ -1,6 +1,12 @@
 <?php
-// dependency inversion principle
-
+/**
+ * Принцип инверсии зависимостей (dependency inversion principle) -
+ * Зависимость на Абстракциях. Нет зависимости на что-то конкретное
+ * Зависимости внутри системы строятся на основе абстракций.
+ * Модули верхнего уровня не зависят от модулей нижнего уровня.
+ * Абстракции не должны зависеть от деталей.
+ * Детали должны зависеть от абстракций.
+ */
 
 // bad example:
 class A {
@@ -18,18 +24,18 @@ class B {
 
 //good example:
 
-interface E {
+interface C {
     public function test1();
 }
 
-class C implements E {
+class A1 implements C {
     public function test1() {
 
     }
 }
 
-class D {
-    public function test2(E $var) { //in params or in constructor
+class B1 {
+    public function test2(C $var) { //сеттер или конструктор или параметр (как тут)
         $var->test1();
     }
 }

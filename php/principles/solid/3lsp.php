@@ -1,5 +1,9 @@
 <?php
-// Liskov substitution principle
+/*
+ * Принцип подстановки Лисков (Liskov substitution principle) -
+ * функции, которые используют базовый тип,
+ * должны иметь возможность использовать подтипы базового типа не зная об этом
+ */
 
 class Bird { // base class
     public function fly() {
@@ -8,7 +12,7 @@ class Bird { // base class
 }
  
 /**
- * good child class
+ * пример хорошего использования принципа
  */
 class Duck extends Bird {
  
@@ -22,7 +26,7 @@ class Duck extends Bird {
 }
  
 /**
- * bad child class
+ * плохой пример - по принципу так делать нельзя
  */
 class Penguin extends Bird {
  
@@ -31,6 +35,15 @@ class Penguin extends Bird {
     return 'i can`t fly ((('; // not typical for base class
     }
  
+    public function swim() {
+        return 4;
+    }
+}
+/**
+ * в данном примере что бы выполнить задачу по принципу нужно сделать отдельный класс Penguin
+ */
+
+class Penguin0 {
     public function swim() {
         return 4;
     }

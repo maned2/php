@@ -1,6 +1,8 @@
 <?php
-// interface segregation principle
-// many interfaces - better than one
+/**
+ * Принцип разделения интерфейса (interface segregation principle) -
+ * много интерфейсов, специально предназначенных для клиентов, лучше, чем один интерфейс общего назначения
+ */
 
 /**
  * bad interface
